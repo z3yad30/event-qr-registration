@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <main class="page-shell">
+        <section class="switch-bar">
+            <div class="switch-labels">
+                <span class="active">Student</span>
+                <a href="/organizer" class="switch-link">Organizer</a>
+            </div>
+        </section>
+
+        <section class="card card-primary">
+            <h1>Student Registration</h1>
+            <p class="subtitle">Enter your name and email to receive your entrance QR code.</p>
+            <form id="registerForm" class="form-grid">
+                <label>
+                    Full name
+                    <input type="text" name="name" placeholder="Enter full name" required />
+                </label>
+                <label>
+                    Email address
+                    <input type="email" name="email" placeholder="Enter email" required />
+                </label>
+                <button type="submit" class="button button-primary">Register</button>
+            </form>
+            <div id="messageBox" class="message-box"></div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <script src="/static/js/form.js"></script>
+</body>
+</html>

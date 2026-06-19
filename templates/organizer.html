@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizer Scanner</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+    <main class="page-shell">
+        <section class="switch-bar">
+            <div class="switch-labels">
+                <a href="/" class="switch-link">Student</a>
+                <span class="active">Organizer</span>
+            </div>
+        </section>
+
+        <section class="card card-primary organizer-card">
+            <h1>Organizer Login</h1>
+            <p class="subtitle">Use your fixed organizer credentials to open the QR scanner.</p>
+
+            <div id="loginSection">
+                <form id="loginForm" class="form-grid">
+                    <label>
+                        Username
+                        <input type="text" name="username" placeholder="Organizer username" required />
+                    </label>
+                    <label>
+                        Password
+                        <input type="password" name="password" placeholder="Password" required />
+                    </label>
+                    <button type="submit" class="button button-primary">Login</button>
+                </form>
+                <div id="loginMessage" class="message-box"></div>
+            </div>
+
+            <div id="scannerSection" class="hidden">
+                <h2>QR Scanner</h2>
+                <div class="camera-frame">
+                    <video id="camera" autoplay playsinline></video>
+                </div>
+                <button id="scanButton" class="button button-secondary">Scan</button>
+                <p id="scanResult" class="scan-result"></p>
+            </div>
+        </section>
+    </main>
+
+    <canvas id="qrCanvas" class="hidden"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.js"></script>
+    <script src="/static/js/organizer.js"></script>
+</body>
+</html>
